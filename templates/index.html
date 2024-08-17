@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Classification</title>
+    <style>
+        body {
+            background-image: url("{{ background_image }}");
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Plant Disease Classification</h1>
+        <form method="POST" action="/predict" enctype="multipart/form-data">
+            <label for="model_type">Choose a model:</label>
+            <select name="model_type" id="model_type">
+                <option value="potato" selected>Potato</option>
+                <option value="tomato">Tomato</option>
+            </select>
+            <br><br>
+            <input type="file" name="file" accept="image/*" required>
+            <br><br>
+            <button type="submit">Predict</button>
+        </form>
+        {% if image %}
+            <h2>Prediction: {{ class_name }}</h2>
+            <h3>Confidence: {{ probability }}</h3>
+            <img src="data:image/jpeg;base64,{{ image }}" alt="Uploaded Image">
+        {% endif %}
+    </div>
+</body>
+</html>
