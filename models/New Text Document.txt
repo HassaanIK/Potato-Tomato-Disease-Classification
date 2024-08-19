@@ -1,0 +1,4 @@
+Models Download links
+
+Potato: https://huggingface.co/hassaanik/Plant_Disease_Classification/blob/main/Models/potato_model_statedict__f.pth
+Tomato: https://huggingface.co/hassaanik/Plant_Disease_Classification/blob/main/Models/tomato_model_statedict__f.pth
