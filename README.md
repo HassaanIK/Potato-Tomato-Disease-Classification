@@ -55,3 +55,5 @@ This project is a web application developed using Flask that allows users to upl
 ## App
 ![Potato](https://github.com/user-attachments/assets/334d5a10-ef6c-4720-8d82-de738a3b2871)
 ![Tomato](https://github.com/user-attachments/assets/f708d7ab-a782-4127-ad08-d39d903dd314)
+
+![HealthCare Bot](https://github.com/user-attachments/assets/88383369-37d0-402c-ab00-4862a6536568)
